@@ -1,4 +1,4 @@
-# Vagrant Environment to Showcase Puppet Enterprise MoM Deployment
+# Showcase Puppet Enterprise MoM Deployment
 
 ## Getting Started
 
