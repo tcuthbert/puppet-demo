@@ -5,7 +5,7 @@
 Before getting started download a copy of puppet enterprise and place it in a directory named data
 
 ```bash
-git clone https://github.com/tcuthbert/puppet-demo
+git clone https://github.com/tcuthbert/puppet-demo --recursive
 cd puppet-demo
 mkdir ./data
 cp ~/Downloads/puppet-enterprise-3.7.2-el-7-x86_64.tar.gz ./data
