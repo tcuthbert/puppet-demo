@@ -6,6 +6,7 @@
 cp /vagrant/config/{hiera.yaml,r10k.yaml} /etc/puppetlabs/puppet/
 cd /etc/
 ln -fs /etc/puppetlabs/puppet/{hiera.yaml,r10k.yaml}
+puppet apply -e 'class { "r10k": remote => "https://github.com/tcuthbert/environmentsrepo"  }'
 #puppet apply -e "/vagrant/environments/site/base/manifests/profiles/r10k_installation.pp"
 #cp /var/lib/peadmin/.mcollective ~/
 #mco r10k synchronize

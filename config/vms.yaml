@@ -16,3 +16,7 @@ vms:
   box: centos-64-x64-vbox4210-nocm
   roles:
     - pe-puppet-agent-green
+#- name: agent-node-blue.puppetdemo.local
+  #box: centos-64-x64-vbox4210-nocm
+  #roles:
+    #- pe-puppet-agent-blue

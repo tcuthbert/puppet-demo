@@ -10,6 +10,8 @@ Vagrant.configure('2') do |config|
 
   config.vm.define "master-top.puppetdemo.local" do |sh|
     sh.vm.provision "shell", path: "config/master_bootstrap.sh"
+    sh.vm.provision "shell", inline: "puppet module install zack-r10k"
+    sh.vm.provision "shell", inline: "puppet apply -e 'class { \"r10k\": remote => \"https://github.com/tcuthbert/environmentsrepo\"  }'"
   end
   config.vm.define "master-mid-green.puppetdemo.local" do |sh|
     sh.vm.provision "shell", path: "config/master_join.sh"
