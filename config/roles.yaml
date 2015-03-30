@@ -1,0 +1,46 @@
+---
+roles:
+  pe-puppet-master-top:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    provider:
+      type: virtualbox
+      customize:
+        - [modifyvm, !ruby/sym id, '--memory', 2048]
+    provisioners:
+      - {type: hosts}
+      - {type: pe_bootstrap, role: !ruby/sym master}
+
+  pe-puppet-master-mid-green:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    provider:
+      type: virtualbox
+      customize:
+        - [modifyvm, !ruby/sym id, '--memory', 2048]
+    provisioners:
+      - {type: hosts}
+
+  pe-puppet-master-mid-blue:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    provider:
+      type: virtualbox
+      customize:
+        - [modifyvm, !ruby/sym id, '--memory', 2048]
+    provisioners:
+      - {type: hosts}
+
+  pe-puppet-agent-green:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    provisioners:
+      - {type: hosts}
+      - {type: pe_bootstrap, master: master-mid-green.puppetdemo.local}
+
+  pe-puppet-agent-blue:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    provisioners:
+      - {type: hosts}
+      - {type: pe_bootstrap, master: master-mid-blue.puppetdemo.local}

@@ -1,0 +1,18 @@
+---
+vms:
+- name: master-top.puppetdemo.local
+  box: centos-64-x64-vbox4210-nocm
+  roles:
+    - pe-puppet-master-top
+- name: master-mid-blue.puppetdemo.local
+  box: centos-64-x64-vbox4210-nocm
+  roles:
+    - pe-puppet-master-mid-blue
+- name: master-mid-green.puppetdemo.local
+  box: centos-64-x64-vbox4210-nocm
+  roles:
+    - pe-puppet-master-mid-green
+- name: agent-node-green.puppetdemo.local
+  box: centos-64-x64-vbox4210-nocm
+  roles:
+    - pe-puppet-agent-green

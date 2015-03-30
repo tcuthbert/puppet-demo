@@ -1,0 +1,14 @@
+---
+:backends:
+  - yaml
+:hierarchy:
+  - common
+  - defaults
+  - "%{clientcert}"
+  - "%{environment}"
+  - global
+  - "nodes/%{fqdn}"
+
+:yaml:
+  :datadir: /etc/puppetlabs/puppet/environments/%{environment}/hiera
+
