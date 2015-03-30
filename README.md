@@ -14,4 +14,4 @@ vagrant up
 ```
 
 What this gives you is a Puppet master, Puppet middle-master and an agent.
-The master will bootstrap an r10k deployment pointing to a bare git repo at /vagrant/config/environmentsrepo
+The master will bootstrap an r10k deployment pointing to a git repo at [this repo](https://github.com/tcuthbert/environmentsrepo)
