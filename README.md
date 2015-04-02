@@ -16,7 +16,7 @@ vagrant up master-mid-green.puppetdemo.local
 
 ## Configure the masters
 
-What this gives you is a Puppet master and a Puppet middle-master. Following instruction from the Puppet doco: [Step 3:](https://docs.puppetlabs.com/pe/latest/install_multimaster.html#step-2-install-compile-master-node) __Classify the New Compile Master Node__,
+What this gives you is a Puppet master and a Puppet middle-master. Following instruction from the Puppet doco: [Step 3:](https://docs.puppetlabs.com/pe/latest/install_multimaster.html#step-3-classify-the-new-compile-master-node) __Classify the New Compile Master Node__,
 Create a node classification rule to pin any hostname with the regex __master__ into the PE Master console node group.
 Now either wait the 30 minutes on jump on each mid master and execute a pupet run
 
