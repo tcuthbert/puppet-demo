@@ -21,7 +21,7 @@ Create a node classification rule to pin any hostname with the regex __master__ 
 Now either wait the 30 minutes on jump on each mid master and execute a pupet run
 
 ```bash
-vagrant ssh master-mid-gree.puppetdemo.local
+vagrant ssh master-mid-green.puppetdemo.local
 
 sudo -i
 puppet agent -t
