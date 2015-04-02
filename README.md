@@ -11,7 +11,7 @@ mkdir ./data
 cp ~/Downloads/puppet-enterprise-3.7.2-el-6-x86_64.tar.gz ./data
 vagrant plugin install oscar
 vagrant up master-top.puppetdemo.local && \
-vagrant up master-mid-green.puppetdemo.local && \
+vagrant up master-mid-green.puppetdemo.local
 ```
 
 ## Configure the masters
