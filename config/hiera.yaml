@@ -1,6 +1,8 @@
 ---
 :backends:
   - yaml
+  - redis
+
 :hierarchy:
   - common
   - defaults
@@ -12,3 +14,12 @@
 :yaml:
   :datadir: /etc/puppetlabs/puppet/environments/%{environment}/hiera
 
+:redis:
+  :host: 10.0.2.15                 # unless present, defaults to localhost
+  #:path: /tmp/redis.sock                        # overrides port if unixsocket exists
+  :soft_connection_failure: true                # bypass exception if Redis server is unavailable; default is false
+
+  :deserialize: :json                           # Try to deserialize; both :yaml and :json are supported
+                                                # When :json is used and JSON::ParseError is raised, gracefully fall
+                                                # back to returning the original value. This is needed to work around
+                                                # JSON.parse('foo'.to_json)

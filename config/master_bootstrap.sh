@@ -10,6 +10,8 @@ puppet module install zack-r10k && \
 puppet apply -e 'class { "r10k": remote => "https://github.com/tcuthbert/environmentsrepo" }' && \
 rm -fr /etc/puppetlabs/puppet/environments/production/*
 r10k deploy environment -pv 
+gem install hiera-redis
+/opt/puppet/bin/puppetserver gem install hiera-redis
 #puppet apply -e 'class { "r10k": remote => "https://github.com/tcuthbert/environmentsrepo"  }'
 #puppet apply -e "/vagrant/environments/site/base/manifests/profiles/r10k_installation.pp"
 #cp /var/lib/peadmin/.mcollective ~/
