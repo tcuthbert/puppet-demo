@@ -8,9 +8,6 @@ Vagrant.configure('2') do |config|
   config.pe_build.filename = "puppet-enterprise-3.7.2-el-6-x86_64.tar.gz"
   config.vm.provision "shell", path: "config/common.sh"
 
-  #config.vm.define "redis.puppetdemo.local" do |sh|
-    #sh.vm.provision "shell", path: "config/install_redis.sh"
-  #end
   config.vm.define "master-top.puppetdemo.local" do |sh|
     sh.vm.provision "shell", path: "config/master_bootstrap.sh"
   end
