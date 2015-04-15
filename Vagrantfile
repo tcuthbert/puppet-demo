@@ -10,6 +10,7 @@ Vagrant.configure('2') do |config|
 
   config.vm.define "master-top.puppetdemo.local" do |sh|
     sh.vm.provision "shell", path: "config/master_bootstrap.sh"
+    sh.vm.provision "shell", inline: "yum -yq install python-requests.noarch && python /vagrant/config/pin_proxy_ca.py https://master-top.puppetdemo.local:4433"
   end
   config.vm.define "master-mid-green.puppetdemo.local" do |sh|
     sh.vm.provision "shell", path: "config/master_join.sh"
