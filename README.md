@@ -15,7 +15,7 @@ vagrant up
 
 ## Now we play the waiting game
 
-It takes roughly 30 minutes for all the agents to register themselves up with the masters. Feel free to jump vagrant ssh into each agent and do a manual puppet run:
+It takes roughly 30 minutes for all the agents to register themselves up with the masters. Feel free to fast track the process by vagrant ssh'ing into each agent and entering a manual puppet run:
 
 ```bash
 sudo puppet agent -t
