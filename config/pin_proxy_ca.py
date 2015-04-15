@@ -40,10 +40,6 @@ def get_infrastructure_class(js):
         if "PE Master" in node[u"name"]:
             return node
 
-def update_puppet_console(id, js):
-    "Updates PE ENC to enable_ca_proxy"
-
-
 def main():
     "Entry point"
     master = ""
