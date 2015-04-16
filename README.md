@@ -13,7 +13,7 @@ vagrant plugin install oscar
 vagrant up
 ```
 
-## Now we play the waiting game
+## Now We Play the Waiting Game
 
 It takes roughly 30 minutes for all the agents to register themselves up with the masters. Feel free to fast track the process by vagrant ssh'ing into each agent and entering a manual puppet run:
 
